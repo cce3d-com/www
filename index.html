@@ -3,159 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US Citizenship Test 2025 - Support</title>
+    <meta name="description" content="Download our iOS apps - US Citizenship Test 2025 Pro and more. High-quality mobile applications for education and productivity.">
+    <title>Our iOS Apps - Download from App Store</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
-        
+
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
+
         header {
             text-align: center;
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 30%, #dc2626 50%, #1e40af 70%, #1e3a8a 100%);
-            background-size: 300% 300%;
-            animation: patrioticFlow 8s ease-in-out infinite;
+            padding: 60px 20px;
             color: white;
-            padding: 40px 20px;
-            margin: -20px -20px 40px -20px;
-            border-radius: 0 0 20px 20px;
-            position: relative;
-            overflow: hidden;
         }
-        
-        
-        @keyframes patrioticFlow {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
+
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
             font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
+
         .subtitle {
-            font-size: 1.2em;
-            color: #f8f9fa;
-            font-weight: 400;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            background: rgba(255,255,255,0.1);
-            padding: 8px 16px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .apps-section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .app-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
             border: 1px solid rgba(255,255,255,0.2);
         }
-        
-        .support-section {
-            background: white;
-            padding: 30px;
+
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 22px;
+            margin: 0 auto 30px;
+            display: block;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover .app-icon {
+            transform: scale(1.05);
+        }
+
+        .app-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .app-description {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
             margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
         }
-        
-        h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
+
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease;
         }
-        
-        h3 {
-            color: #555;
-            margin: 25px 0 15px 0;
-            font-size: 1.3em;
+
+        .download-btn:hover {
+            transform: scale(1.05);
         }
-        
-        p, li {
-            margin-bottom: 12px;
-            color: #555;
-            font-size: 1.1em;
+
+        .download-btn img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
-        
-        ul {
-            padding-left: 25px;
+
+        .app-links {
+            text-align: center;
         }
-        
-        .contact-info {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
-        }
-        
-        .email-link {
-            color: #667eea;
+
+        .more-info-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
             text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
             font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
-        
-        .email-link:hover {
+
+        .more-info-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a42a0 100%);
+        }
+
+        .coming-soon {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px dashed rgba(255,255,255,0.3);
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 24px;
+            color: white;
+        }
+
+        .coming-soon h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .coming-soon p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px 40px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a:hover {
+            color: white;
             text-decoration: underline;
         }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .feature-item {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .feature-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-        }
-        
-        .version-info {
-            text-align: center;
-            color: #777;
-            font-size: 0.9em;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        .flag {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 10px;
-            }
-            
+
+        @media (max-width: 768px) {
             h1 {
-                font-size: 2em;
+                font-size: 2.5rem;
             }
             
-            .support-section {
-                padding: 20px;
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .apps-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .app-card {
+                padding: 30px;
+            }
+            
+            header {
+                padding: 40px 20px;
             }
         }
     </style>
@@ -163,152 +222,43 @@
 <body>
     <div class="container">
         <header>
-            <div class="flag" style="font-family: Arial, sans-serif; font-weight: bold; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">★ USA ★</div>
-            <h1>US Citizenship Test 2025</h1>
-            <p class="subtitle">Complete Preparation Guide - Support Center</p>
+            <h1>Our iOS Apps</h1>
+            <p class="subtitle">Discover our collection of high-quality mobile applications designed to enhance your learning and productivity experience.</p>
         </header>
 
-        <div class="support-section">
-            <h2>Download Our App</h2>
-            <div style="display: flex; align-items: center; justify-content: center; gap: 30px; flex-wrap: wrap; text-align: center;">
-                <div style="flex-shrink: 0;">
-                    <img src="app-icon.png" alt="US Citizenship Test 2025 App Icon" style="width: 120px; height: 120px; border-radius: 22px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); border: 1px solid #e0e0e0;">
+        <section class="apps-section">
+            <h2 class="section-title">Available Now</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iMjIiIGZpbGw9IiMxRDRFRDgiLz4KPGNpcmNsZSBjeD0iNjAiIGN5PSI0NSIgcj0iMjAiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0zMCA3NUg5MFY4NUgzMFY3NVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0zNSA5MEg4NVY5NUgzNVY5MFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik00MCA2MEg4MFY2NUg0MFY2MFoiIGZpbGw9IndoaXRlIi8+Cjx0ZXh0IHg9IjYwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzFENEVEOCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VVM8L3RleHQ+CjwvU3ZnPgo=" alt="US Citizenship Test 2025 Pro Icon" class="app-icon">
+                    <h3 class="app-title">US Citizenship Test 2025 Pro</h3>
+                    <p class="app-description">Master your path to US citizenship with our comprehensive study app. Features all 100 official USCIS civics questions, interactive practice tests, audio support, and state-specific customization to help you pass with confidence.</p>
+                    <div class="app-links">
+                        <a href="https://apps.apple.com/us/app/us-citizenship-test-2025-pro/id6751211514" class="download-btn" target="_blank">
+                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1735689600" alt="Download on the App Store">
+                        </a>
+                        <a href="https://citi.cce3d.net/" class="more-info-btn" target="_blank">
+                            <span>Learn More & Support</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div style="flex-grow: 1; min-width: 250px;">
-                    <h3 style="margin: 0 0 15px 0; color: #333; font-size: 1.4em;">Get the complete citizenship test preparation app</h3>
-                    <p style="margin-bottom: 20px; color: #666; font-size: 1.1em;">Download now and start your journey to U.S. citizenship</p>
-                    <a href="https://apps.apple.com/app/your-app-id" target="_blank" style="display: inline-block; background: #000; color: white; padding: 12px 24px; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1em; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.2);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'">
-                        <span style="font-size: 1.2em; margin-right: 8px;">🍎</span>
-                        Download on the App Store
-                    </a>
+
+                <div class="coming-soon">
+                    <h3>More Apps Coming Soon</h3>
+                    <p>We're working on exciting new applications to help you learn, grow, and succeed. Stay tuned for updates!</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="support-section">
-            <h2>About This App</h2>
-            <p>US Citizenship Test 2025 is the most comprehensive study app for the U.S. naturalization exam. Our app contains all 100 official USCIS civics questions, interactive flashcards, practice tests, and audio support to help you pass your citizenship test with confidence.</p>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-title">Complete Question Bank</div>
-                    <p>All 100 official USCIS civics questions updated for 2025</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Interactive Flashcards</div>
-                    <p>Swipe through questions with audio pronunciation</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">Practice Tests</div>
-                    <p>Realistic exam simulation with progress tracking</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-title">State Personalization</div>
-                    <p>Customized questions for your state's representatives</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="help.htm" style="display: inline-block; background: #667eea; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: 600; transition: background 0.3s;">📖 View Complete Help Guide</a>
-            </div>
-        </div>
-
-        <div class="support-section">
-            <h2>Frequently Asked Questions</h2>
-            
-            <h3>How do I set my state information?</h3>
-            <p>Go to Settings in the app and select your state. You can then customize your governor, senators, and representative information for personalized questions.</p>
-            
-            <h3>Can I use the app offline?</h3>
-            <p>Yes! Once downloaded, the app works completely offline. All questions, explanations, and audio are stored locally on your device.</p>
-            
-            <h3>Are the questions up to date?</h3>
-            <p>Absolutely. Our app is updated regularly with the latest USCIS civics questions and current political information for 2025.</p>
-            
-            <h3>How do I turn on/off audio?</h3>
-            <p>You can control audio settings in the Settings menu. Each question also has a speaker button for individual audio control.</p>
-            
-            <h3>Can I track my progress?</h3>
-            <p>Yes, the app tracks your practice test scores and identifies areas where you need more study.</p>
-            
-            <h3>Is this app affiliated with USCIS?</h3>
-            <p>No, this is an independent study app. However, all content is based on official USCIS materials and guidelines.</p>
-        </div>
-
-        <div class="support-section">
-            <h2>Troubleshooting</h2>
-            
-            <h3>App crashes or won't open</h3>
-            <ul>
-                <li>Force close the app and restart it</li>
-                <li>Restart your device</li>
-                <li>Make sure you have the latest iOS version</li>
-                <li>Try deleting and reinstalling the app</li>
-            </ul>
-            
-            <h3>Audio not working</h3>
-            <ul>
-                <li>Check your device's volume and mute switch</li>
-                <li>Ensure audio is enabled in the app settings</li>
-                <li>Try using headphones to test audio output</li>
-                <li>Check if other apps can play audio normally</li>
-            </ul>
-            
-            <h3>Questions not loading</h3>
-            <ul>
-                <li>The app works offline, so no internet connection is needed</li>
-                <li>Try restarting the app</li>
-                <li>If problems persist, reinstall the app</li>
-            </ul>
-        </div>
-
-        <div class="support-section">
-            <h2>Contact Support</h2>
+        <footer>
             <div class="contact-info">
-                <p>Need help? Have a question? We're here to assist you on your path to U.S. citizenship.</p>
-                <p><strong>Email:</strong> <a href="mailto:support@uscitizenshiptestapp.com" class="email-link">support@uscitizenshiptestapp.com</a></p>
-                <p><strong>Response Time:</strong> We typically respond within 24-48 hours</p>
-                <p>When contacting support, please include:</p>
-                <ul>
-                    <li>Your device model and iOS version</li>
-                    <li>App version number</li>
-                    <li>Detailed description of the issue</li>
-                    <li>Steps to reproduce the problem</li>
-                </ul>
+                <p>Questions or support? Contact us at <a href="mailto:app@cce3d.com">app@cce3d.com</a></p>
             </div>
-        </div>
-
-        <div class="support-section">
-            <h2>Privacy Policy</h2>
-            <p>We respect your privacy. This app:</p>
-            <ul>
-                <li>Does not collect personal information</li>
-                <li>Does not track your study progress online</li>
-                <li>All data is stored locally on your device</li>
-                <li>No account registration required</li>
-                <li>Contains ads to support free access to study materials</li>
-            </ul>
-            <p>For detailed privacy information, please see our full Privacy Policy in the App Store.</p>
-        </div>
-
-        <div class="support-section">
-            <h2>Study Tips</h2>
-            <p>Maximize your success with these study strategies:</p>
-            <ul>
-                <li><strong>Study regularly:</strong> Spend 15-20 minutes daily rather than cramming</li>
-                <li><strong>Use flashcards:</strong> Great for memorizing facts and dates</li>
-                <li><strong>Take practice tests:</strong> Simulate the real exam experience</li>
-                <li><strong>Focus on weak areas:</strong> Spend extra time on categories you find challenging</li>
-                <li><strong>Use audio:</strong> Listen while commuting or exercising</li>
-                <li><strong>Understand, don't just memorize:</strong> Read the explanations for better comprehension</li>
-            </ul>
-        </div>
-
-        <div class="version-info">
-            <p>US Citizenship Test 2025 - Version 1.0</p>
-            <p>Updated for 2025 • Compatible with iOS 14.0 and later</p>
-            <p>Good luck on your journey to U.S. citizenship! 🇺🇸</p>
-        </div>
+            <p>&copy; 2025 - All rights reserved. iOS and App Store are trademarks of Apple Inc.</p>
+        </footer>
     </div>
 </body>
 </html>
