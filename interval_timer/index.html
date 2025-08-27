@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Timer App - Ultimate HIIT & Tabata Workout Timer for iOS | Free Download</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transform your fitness with our free HIIT & Tabata interval timer app for iOS. Track workouts, customize routines, and achieve your fitness goals with professional interval training.">
+    <meta name="keywords" content="HIIT timer, Tabata timer, interval training app, workout timer iOS, fitness app, high intensity interval training, circuit training timer, free workout app, interval timer, fitness tracker">
+    <meta name="author" content="Interval Timer App">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yoursite.com/">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Interval Timer App - Ultimate HIIT & Tabata Workout Timer">
+    <meta property="og:description" content="Transform your fitness with our free HIIT & Tabata interval timer app. Professional workout tracking and customizable routines.">
+    <meta property="og:image" content="https://yoursite.com/app-preview.jpg">
+    <meta property="og:url" content="https://yoursite.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Interval Timer App">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interval Timer App - Ultimate HIIT & Tabata Workout Timer">
+    <meta name="twitter:description" content="Transform your fitness with our free HIIT & Tabata interval timer app.">
+    <meta name="twitter:image" content="https://yoursite.com/app-preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Interval Timer App",
+        "description": "Professional HIIT and Tabata interval timer app for iOS with workout tracking and customizable routines",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1000"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-white {
+            background: white;
+        }
+        
+        .section-gray {
+            background: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Features Section */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        /* App Screenshots Section */
+        .screenshots {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .screenshots .section-title {
+            color: white;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .screenshot-placeholder {
+            background: rgba(255, 255, 255, 0.1);
+            height: 500px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Comparison Section */
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-top: 3rem;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table .highlight {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">⏱️ Interval Timer</a>
+            <ul class="nav-links">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Transform Your Fitness with Professional HIIT & Tabata Training</h1>
+                <p>The ultimate interval timer app for iOS. Maximize your workout efficiency, burn more calories, and achieve your fitness goals faster with scientifically-proven high-intensity interval training.</p>
+                <a href="#download" class="cta-button">Download Free on App Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is HIIT Section -->
+    <section class="section section-white" id="hiit-intro">
+        <div class="container">
+            <h2 class="section-title">What is HIIT & Tabata Training?</h2>
+            <p class="section-subtitle">High-Intensity Interval Training (HIIT) and Tabata are revolutionary workout methods that alternate between intense bursts of activity and brief recovery periods, delivering maximum results in minimum time.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🔥</div>
+                    <h3>HIIT Training</h3>
+                    <p>High-Intensity Interval Training involves short bursts of intense exercise followed by rest periods. Typically 15-45 seconds of work with 10-60 seconds of rest, proven to boost metabolism for up to 24 hours after your workout.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Tabata Protocol</h3>
+                    <p>A specific HIIT format: 20 seconds of ultra-intense exercise followed by 10 seconds of rest, repeated 8 times (4 minutes total). Originally developed by Dr. Izumi Tabata, proven to improve both aerobic and anaerobic fitness.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Science-Backed Results</h3>
+                    <p>Research shows HIIT can burn 25-30% more calories than other forms of exercise, improve cardiovascular health, increase insulin sensitivity, and preserve muscle mass while burning fat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits Section -->
+    <section class="section section-gray" id="benefits">
+        <div class="container">
+            <h2 class="section-title">Proven Health Benefits</h2>
+            <p class="section-subtitle">Transform your body and health with scientifically-proven benefits of interval training</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💪</div>
+                    <h3>Burns More Calories</h3>
+                    <p>HIIT burns 25-30% more calories than steady-state cardio and continues burning calories for hours after your workout (EPOC effect).</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Improves Heart Health</h3>
+                    <p>Reduces heart rate, blood pressure, and improves cardiovascular efficiency. Studies show significant improvements in just 8 weeks.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Increases Metabolism</h3>
+                    <p>Boosts your metabolic rate for up to 24 hours post-workout, helping you burn calories even while resting.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🕒</div>
+                    <h3>Saves Time</h3>
+                    <p>Get better results in 15-20 minutes than traditional hour-long workouts. Perfect for busy schedules.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🍃</div>
+                    <h3>Reduces Body Fat</h3>
+                    <p>More effective at reducing visceral fat (dangerous belly fat) compared to steady-state cardio.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Enhances Mental Health</h3>
+                    <p>Releases endorphins, reduces stress, improves mood, and enhances cognitive function and focus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features Section -->
+    <section class="section section-white" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Interval Timer App?</h2>
+            <p class="section-subtitle">Professional-grade features designed to maximize your workout efficiency and track your progress</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Customizable Workouts</h3>
+                    <p>Create unlimited custom routines with flexible work/rest intervals, preparation time, and number of sets. Perfect for HIIT, Tabata, circuit training, and more.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Workout History & Analytics</h3>
+                    <p>Track your progress with detailed workout history, completion rates, and performance analytics. See your fitness journey unfold with comprehensive statistics.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔊</div>
+                    <h3>Smart Audio Cues</h3>
+                    <p>Voice announcements and customizable sounds keep you focused. "Get Ready," "Go," and "Rest" commands so you never need to look at your phone.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Beautiful iOS Design</h3>
+                    <p>Native iOS app with stunning visuals, smooth animations, and intuitive interface. Designed specifically for iPhone and iPad with iOS best practices.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔋</div>
+                    <h3>Background Operation</h3>
+                    <p>Continues running even when your phone is locked or you switch apps. Perfect for outdoor workouts or when using other fitness apps.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💝</div>
+                    <h3>Free to Start</h3>
+                    <p>Download free with all core features. Optional one-time purchase to remove ads and unlock premium experience. No subscriptions required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section -->
+    <section class="section screenshots" id="screenshots">
+        <div class="container">
+            <h2 class="section-title">See It In Action</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Beautiful, intuitive design that keeps you motivated and focused</p>
+            
+            <div class="screenshot-grid">
+                <div class="screenshot-placeholder">
+                    📱 Main Timer Screen
+                    <br><small>Upload your app screenshot here</small>
+                </div>
+                <div class="screenshot-placeholder">
+                    📊 Workout History
+                    <br><small>Upload your app screenshot here</small>
+                </div>
+                <div class="screenshot-placeholder">
+                    ⚙️ Custom Routines
+                    <br><small>Upload your app screenshot here</small>
+                </div>
+                <div class="screenshot-placeholder">
+                    🎨 Settings & Themes
+                    <br><small>Upload your app screenshot here</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">How We Compare to Other Timer Apps</h2>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="highlight">Our App</th>
+                            <th>Generic Timer Apps</th>
+                            <th>Expensive Alternatives</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Custom Intervals</td>
+                            <td class="highlight">✅ Unlimited</td>
+                            <td>❌ Limited</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Workout History</td>
+                            <td class="highlight">✅ Detailed Analytics</td>
+                            <td>❌ None</td>
+                            <td>✅ Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Voice Announcements</td>
+                            <td class="highlight">✅ Smart Audio Cues</td>
+                            <td>❌ Beeps Only</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Background Operation</td>
+                            <td class="highlight">✅ Full Support</td>
+                            <td>❌ Limited</td>
+                            <td>✅ Yes</td>
+                        </tr>
+                        <tr>
+                            <td>iOS Optimization</td>
+                            <td class="highlight">✅ Native Design</td>
+                            <td>❌ Generic UI</td>
+                            <td>⚠️ Cross-platform</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td class="highlight">✅ Free + Optional Premium</td>
+                            <td>💰 Limited Features</td>
+                            <td>💰 $9.99/month</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="section section-white" id="download">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Ready to Transform Your Fitness?</h2>
+            <p class="section-subtitle">Join thousands of users who have already transformed their fitness with our interval timer app. Download now and start your journey to a healthier, fitter you.</p>
+            
+            <div style="margin: 3rem 0;">
+                <a href="#" class="cta-button" style="margin: 0 1rem;">
+                    📱 Download for iPhone
+                </a>
+            </div>
+            
+            <p style="color: #666; font-size: 0.9rem;">
+                ⭐⭐⭐⭐⭐ Rated 4.8/5 stars by 1000+ users<br>
+                Compatible with iOS 15.0 or later • Free download • Premium upgrade available
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Interval Timer App. All rights reserved. Built with ❤️ for fitness enthusiasts.</p>
+            <p style="margin-top: 1rem; opacity: 0.7;">
+                <a href="#" style="color: #ccc; text-decoration: none; margin: 0 1rem;">Privacy Policy</a>
+                <a href="#" style="color: #ccc; text-decoration: none; margin: 0 1rem;">Terms of Service</a>
+                <a href="#" style="color: #ccc; text-decoration: none; margin: 0 1rem;">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.card, .feature-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in');
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize scroll animations
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
