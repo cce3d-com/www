@@ -41,6 +41,44 @@
             color: white;
         }
 
+        .logo-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section img {
+            width: 300px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1);
+        }
+
         h1 {
             font-size: 3.5rem;
             font-weight: 700;
@@ -229,13 +267,22 @@
     </style>
 </head>
 <body>
+    <div class="logo-section">
+        <img src="logo.svg" alt="CCE3D Logo">
+        <nav class="nav-links">
+            <a href="#apps">Our Apps</a>
+            <a href="mailto:app@cce3d.com">Contact</a>
+            <a href="https://cce3d.net">About</a>
+        </nav>
+    </div>
+    
     <div class="container">
         <header>
             <h1>Our iOS Apps</h1>
             <p class="subtitle">Discover our collection of high-quality mobile applications designed to enhance your learning and productivity experience.</p>
         </header>
 
-        <section class="apps-section">
+        <section id="apps" class="apps-section">
             <h2 class="section-title">Available Now</h2>
             <div class="apps-grid">
                <div class="app-card">
